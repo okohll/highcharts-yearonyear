@@ -1,0 +1,39 @@
+{
+					"name": "year on year",
+					"version": "0.1",
+					"title": "Convert to Year On Year series",
+					"author": {
+						"name": "agileChilli",
+						"url": "http://www.agilechilli.com"
+					},
+					"licenses": [
+						{
+							"type": "GPL 3",
+							"url": "https://www.gnu.org/licenses/gpl-3.0.en.html"
+						}
+					],
+					"dependencies": {
+						"highcharts": "4"
+					},
+					"type": "plugin",
+					"description": "The plugin is a function to convert each series in chart with monthly date values covering multiple years into separate series for each year overlayed over each other, to create a 'year on year' chart",
+					"keywords": [
+						"year on year",
+						"date"
+					],
+					"homepage": "https://github.com/okohll/highcharts-yearonyear/",	
+					"docs": "",	
+					"bugs": "",
+					"download": "",
+					"demo": [
+						"",
+						""
+					],
+					"maintainers": [
+						{
+							"name": "Oliver Kohll",
+							"email": "oliver@agilechilli.com",
+							"url": "http://www.agilechilli.com"
+						}
+					]	
+				}
