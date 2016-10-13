@@ -1,6 +1,10 @@
 function splitSeriesByYear(id) {
 	var chart = $('#' + id).highcharts();
-
+	var seriesType = chart.options.chart.defaultSeriesType;
+	if ((seriesType == "bar") || (seriesType == "pie")) {
+		// Unable to do year on year with these types
+		return;
+	}
 	// get max year
 	var max_year = 1990;
 	$.each(chart.series, function(i, series) {
@@ -50,8 +54,13 @@ function splitOneSeries(series, max_year) {
 		}
 
 		var index = years.indexOf(year);
-		new_series[index].data
-				.push([ Date.UTC(max_year, month, date), data.y ]);
+		if (index == -1) {
+			// This is probably because there's only 
+			console.log("Unable to find year " + year + " from date " + data.category);
+		} else {
+			new_series[index].data
+			.push([ Date.UTC(max_year, month, date), data.y ]);
+		}
 	});
 	return new_series;
 }
